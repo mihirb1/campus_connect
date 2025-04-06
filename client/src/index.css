@@ -118,3 +118,79 @@
     @apply bg-background text-foreground;
   }
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, html {
+  height: 100%;
+  background-color: black;
+}
+.page {
+  background-color: rgb(34, 32, 32);
+  min-height: 110vh;
+  width: 100%;
+}
+
+.navbar {
+  background-color: rgb(34, 32, 32); /* changed from white to black */
+  display: flex;
+  padding: 10px 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: clamp(30px, 5vw, 150px);
+  height: auto;
+}
+
+/* Set all navbar text to white */
+.cc, .nav-item {
+  color: white; /* changed from black to white */
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 5px 20px;
+  text-decoration: none;
+}
+.nav-item:hover{
+  color: white;
+  background: linear-gradient(to right, orange, orangered, red);
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+
+
+.title, .subtitle {
+  text-align: center;
+  margin: 5% auto; /* auto centers horizontally */
+  font-size: 60px;
+  white-space: nowrap;
+}
+
+.title {
+  background: linear-gradient(to right, yellow, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 10%;
+  background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  margin-top: -4%;
+  background: white;
+  font-size: 45px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.nav-items, .nav-title{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
