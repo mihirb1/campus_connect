@@ -1,8 +1,8 @@
-import Navbar from "@/components/navbar"
+import Navbar from "@/components/navbar/navbar.tsx"
 import Home from './Home.tsx';
 function App() {
   return (
-    <main className="bg-black text-white h-screen">
+    <main className="page">
       <Navbar />
       <Home />
 

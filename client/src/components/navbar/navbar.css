@@ -1,0 +1,30 @@
+  .navbar {
+    background-color: rgb(34, 32, 32); /* changed from white to black */
+    display: flex;
+    padding: 10px 50px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    width: clamp(30px, 5vw, 150px);
+    height: auto;
+  }
+  
+  /* Set all navbar text to white */
+  .cc, .nav-item {
+    color: white; /* changed from black to white */
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 5px 20px;
+    text-decoration: none;
+  }
+  .nav-item:hover{
+    color: white;
+    background: linear-gradient(to right, orange, orangered, red);
+    padding: 5px 20px;
+    border-radius: 5px;
+  }
+  .nav-dropdown {
+    width: 100%;
+  }
