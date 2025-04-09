@@ -8,7 +8,7 @@ const Navbar = () => {
             <div className = "nav-items">
                 <a href = "/" className = "nav-item">About</a>
                 <a href = "/" className = "nav-item">Home</a>
-                <a href  = "/" className = "nav-item">Create Event</a>
+                <a href  = "/create" className = "nav-item">Create Event</a>
             </div>
         </div>
     );

@@ -22,35 +22,34 @@ export default function Navbar() {
           <div className="flex items-center">
             <div className = "nav-items">
                 <a href = "/" className = "nav-item">About</a>
-                <a href = "/" className = "nav-item">Home</a>
-                <a href  = "/" className = "nav-item">Create Event</a>
+                <a href = "/events" className = "nav-item"> Events </a>
+                <a href  = "/create" className = "nav-item">Create Event</a>
             </div>
 
             <div className="ml-8">
 
-              <NavigationMenu>
+              <NavigationMenu  className = "dropdown">
                 <NavigationMenuList>
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="nav-item">
-                      <div className="flex">
+                    <NavigationMenuTrigger className="user">
                         <Avatar className="h-8 w-8 border border-gray-200">
                           <AvatarImage src="/placeholder.svg?height=32&width=32" alt="User" />
                           <AvatarFallback>
                             <User className="h-4 w-4" />
                           </AvatarFallback>
                         </Avatar>
-                        <span>John Doe</span>
-                      </div>
+                        <span className = "username">&nbsp;John Doe</span>
+
                     </NavigationMenuTrigger>
                     <NavigationMenuContent className = "nav-dropdown">
-                        <div>
-                          <NavigationMenuLink>
+                        <div className = 'dropdown'>
+                          <NavigationMenuLink className="create-events">
                             Create events
                           </NavigationMenuLink>
-                          <NavigationMenuLink>
+                          <NavigationMenuLink className = "create-events">
                             Saved events
                           </NavigationMenuLink>
-                          <NavigationMenuLink>
+                          <NavigationMenuLink className = "create-events">
                             Events I'm attending
                           </NavigationMenuLink>
                         </div>

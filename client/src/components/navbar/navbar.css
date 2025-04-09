@@ -10,12 +10,21 @@
     width: clamp(30px, 5vw, 150px);
     height: auto;
   }
-  
+
+  .user {
+    padding: 1.5rem;
+    background-color: grey;
+    font-size: 1rem;
+  }
+
+  .username {
+    font-size: 17px;
+    margin-top: 4px;
+  }
   /* Set all navbar text to white */
   .cc, .nav-item {
     color: white; /* changed from black to white */
     font-size: 1.5rem;
-    font-weight: bold;
     padding: 5px 20px;
     text-decoration: none;
   }
@@ -26,5 +35,14 @@
     border-radius: 5px;
   }
   .nav-dropdown {
-    width: 100%;
+    width: 172px;
+  }
+
+  .flex {
+    /* background-color: black;  */
+    /* adds a nice look lowkey */
+  }
+  .create-events:hover{
+    background-color: black;
+    color: white;
   }
