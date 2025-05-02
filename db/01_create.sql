@@ -3,7 +3,7 @@ WHERE NOT EXISTS (SELECT FROM pg_database WHERE datname = 'campus_connect')\gexe
 
 \c campus_connect;
 
-create type event_type_enum as enum ('social', 'academic', 'workshop', 'fitness', 'hobby');
+create type event_type_enum as enum ('Social', 'Academic', 'Workshop', 'Fitness', 'Hobby');
 
 CREATE TABLE users(
   id SERIAL PRIMARY KEY,

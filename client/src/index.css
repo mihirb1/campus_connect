@@ -179,6 +179,7 @@
 .title, .subtitle {
   text-align: center;
   margin: 5% auto; /* auto centers horizontally */
+  padding: 2px;
   font-size: 60px;
   white-space: nowrap;
 }

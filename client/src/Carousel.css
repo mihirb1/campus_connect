@@ -1,0 +1,39 @@
+/* Carousel.css */
+#carouselExample {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    border-radius: 30px;
+    max-height: 800px;
+    max-width: 1200px;
+
+    overflow: hidden;
+  }
+  
+  .carousel-inner {
+    max-height: 400px;
+  }
+  
+  .carousel-item img {
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  #card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: #333;
+    border-radius: 10%;
+    overflow: hidden;
+  }
+  
+  .card-desc {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 24px; /* Increased font size */
+    white-space: nowrap; /* Force single line */
+  }
+

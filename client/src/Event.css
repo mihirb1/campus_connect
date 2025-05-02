@@ -1,8 +1,28 @@
-.event-title {
+.carousel {
+    margin-top: 3rem;
+}
+.loading {
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-top: 16rem;
+    font-size: 35px;
+}
+
+.event-item {
+    color: white;
+    font-size: 15px;
     display: flex;
     justify-content: center;
     margin: auto;
-    margin-top: 3rem;
-    color: white;
-    font-size: 60px;
+}
+
+.cards {
+    /* converted 100 pixels to rem */
+    display: grid;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-top: 5rem;
+    gap: 7rem;
+    grid-template-columns: 1fr 1fr 1fr;
 }

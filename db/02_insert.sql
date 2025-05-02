@@ -9,11 +9,11 @@ INSERT INTO users (name, email, profile_pic, bio) VALUES
 ('Arav', 'apanchmatia@sjsu.edu', 'https://media.licdn.com/dms/image/v2/D5635AQG9pKuQc4cgVg/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1725302103787?e=1744491600&v=beta&t=eYyQhlTI6CRS8n0MwtPJbPRKhojbDC6rYxwMrqMswTU', 'Call me Ari');
 
 INSERT INTO events (owner_id, start_date, end_date, start_time, end_time, event_type, description, links, organization, event_capacity, location) VALUES 
-(1, '2025-04-05', '2025-04-05', '19:00:00', '22:00:00', 'social', 'Watch Warriors game in the lounge', ARRAY['http://example.com/stream'], 'SJSU', null, 'CVC Lounge'),
-(2, '2025-04-07', null, '9:00:00', '21:00:00', 'hobby', 'Code', ARRAY['https://www.khanacademy.org'], 'ACM SJSU', 1, 'Engineering Building'),
-(3, '2025-04-10', '2025-04-10', '17:00:00', '19:00:00', 'workshop', 'IIA Meeting - Resume Review', ARRAY['https://wwww.theiia.org/e/chapters/united-states/california/san-jose'], 'IIA SJSU', 50, 'BBC'),
-(4, '2025-05-01', null, '18:00:00', '20:00:00', 'hobby', 'Play football', ARRAY['http://nfl.com'], 'SJSU', null, 'Tower Lawn'),
-(5, '2025-05-15', null, '20:00:00', '21:00:00', 'fitness', 'Hit the Gym', ARRAY['http://24hourfitness.com'], 'SJSU', 3, 'SRAC');
+(1, '2025-04-05', '2025-04-05', '19:00:00', '22:00:00', 'Social', 'Watch Warriors game in the lounge', ARRAY['http://example.com/stream'], 'SJSU', null, 'CVC Lounge'),
+(2, '2025-04-07', null, '9:00:00', '21:00:00', 'Hobby', 'Code', ARRAY['https://www.khanacademy.org'], 'ACM SJSU', 1, 'Engineering Building'),
+(3, '2025-04-10', '2025-04-10', '17:00:00', '19:00:00', 'Workshop', 'IIA Meeting - Resume Review', ARRAY['https://wwww.theiia.org/e/chapters/united-states/california/san-jose'], 'IIA SJSU', 50, 'BBC'),
+(4, '2025-05-01', null, '18:00:00', '20:00:00', 'Hobby', 'Play football', ARRAY['http://nfl.com'], 'SJSU', null, 'Tower Lawn'),
+(5, '2025-05-15', null, '20:00:00', '21:00:00', 'Fitness', 'Hit the Gym', ARRAY['http://24hourfitness.com'], 'SJSU', 3, 'SRAC');
 
 INSERT INTO saved_events(user_id, event_id) VALUES (2, 3), (3, 4), (4, 5), (5, 1);
 

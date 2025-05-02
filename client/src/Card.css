@@ -1,0 +1,63 @@
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background: white;
+    max-width: 350px; /* was 500px */
+    margin: 8px auto;
+    font-family: Arial, sans-serif;
+    font-size: 14px; /* shrink overall text slightly */
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    max-height: 180px; /* optional: limit image height */
+    object-fit: cover;
+  }
+  
+  .container {
+    padding: 12px; /* reduce padding */
+  }
+  
+  .bubble-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px; /* slightly tighter spacing */
+    margin-bottom: 10px;
+  }
+  
+  .event-bubble {
+    background-color: #e0f0ff;
+    color: #007bff;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+  }
+  
+  .info-bubble {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 4px 8px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+  }
+  
+  .description {
+    font-size: 0.9rem;
+    margin: 6px 0 14px;
+    color: #333;
+  }
+  
+  .org {
+    font-weight: bold;
+    margin-top: 6px;
+  }
+  
+  .location {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 8px;
+  }
+  
