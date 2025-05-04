@@ -11,11 +11,14 @@ function App() {
     <Router>
       <main className="page">
         <Navbar />
+ 
+
         <Routes>
+          
           <Route path="/" element={<Home />} />
           <Route path="/create" element={<Create />} />
           <Route path="/events" element={<Event />} />
-          <Route path="/events" element={<Map />} />
+          <Route path="/maps" element={<Map />} />
         </Routes>
       </main>
     </Router>

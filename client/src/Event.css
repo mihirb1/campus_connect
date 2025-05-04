@@ -1,28 +1,43 @@
-.carousel {
+.event {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .event-container {
+    width: 95%;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  
+  .carousel {
     margin-top: 3rem;
-}
-.loading {
+  }
+  
+  .the_filter {
+    margin-top: 2rem;
+  }
+  
+  .loading {
     display: flex;
     justify-content: center;
     color: white;
     margin-top: 16rem;
     font-size: 35px;
-}
-
-.event-item {
+  }
+  
+  .event-item {
     color: white;
     font-size: 15px;
     display: flex;
     justify-content: center;
     margin: auto;
-}
-
-.cards {
-    /* converted 100 pixels to rem */
+  }
+  
+  .cards {
     display: grid;
-    margin-left: 10rem;
-    margin-right: 10rem;
-    margin-top: 5rem;
     gap: 7rem;
-    grid-template-columns: 1fr 1fr 1fr;
-}
+    margin-top: 5rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  

@@ -1,14 +1,53 @@
-.filter {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    font-size: 25px;
-    color: white;
-    width: 1500px;
-    height: 40px;
-    background-color: grey;
-    margin-top: 70px;
-    margin-bottom: 100px;
-    border-radius: 20px;
-    padding-left: 10px;
+.filters {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem; /* previously 1.5rem */
+  background: white;
+  padding: 12px 24px;
+  margin: 60px auto 80px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 1300px;
+  overflow-x: auto;
+}
+
+.filters > div {
+  display: flex;
+  align-items: center;
+  gap: 24px; /* previously 12px */
+  min-width: 160px;
+  flex: 0 0 auto;
+}
+.filters label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+  white-space: nowrap;
+}
+
+.filters input,
+.filters select {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 13px;
+  outline: none;
+  background-color: #fafafa;
+  width: 120px; /* limit input width */
+}
+
+.filters input[type="number"] {
+  width: 60px;
+}
+
+.filters input:focus,
+.filters select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.15);
+}
+
+.filters select {
+  background-color: white;
 }

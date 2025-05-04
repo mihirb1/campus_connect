@@ -51,7 +51,11 @@ const Card = ({ event }: CardProps) => {
       <div className="container">
         <div className="bubble-row">
           <span className="event-bubble">{event.event_type}</span>
-          {event.cost > 0 && <span className="info-bubble">${event.cost.toFixed(2)}</span>}
+          {event.cost !== null && !isNaN(Number(event.cost)) && (
+            <span className="info-bubble">
+              {Number(event.cost) === 0 ? 'Free' : `$${Number(event.cost).toFixed(2)}`}
+            </span>
+          )}
           {event.event_capacity !== null && event.event_capacity > 0 && (
             <span className="info-bubble">{event.event_capacity} spot{event.event_capacity > 1 ? 's' : ''}</span>
           )}

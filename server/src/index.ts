@@ -8,6 +8,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
+// gets data from database and puts it on route (backend)
 app.use(cors());
 app.use(express.json());
 app.get("/", async (req, res) => {
@@ -18,6 +19,7 @@ app.get("/events", async (req, res) => {
     const events = await db("events").select("*");
     res.status(200).json({ events });
 });
+// puts events sent from frontend to backend into database
 app.post("/events", async (req, res) => {
     try {
         console.log(req.body)
