@@ -1,54 +1,72 @@
-  .navbar {
-    
-    background-color: rgb(34, 32, 32); /* changed from white to black */
-    display: flex;
-    padding: 10px 50px;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo {
-    width: clamp(30px, 5vw, 150px);
-    height: auto;
-  }
+.navbar {
+  background-color: rgb(34, 32, 32);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .user {
-    margin-top: 1rem;
-    margin-right: 2rem;
-    padding: 1.5rem;
-    background-color: white;
-    border-radius: 5px;
-    font-size: 1rem;
-    width: 11rem;
-  }
+.logo {
+  width: clamp(40px, 5vw, 130px);
+  height: auto;
+}
 
-  .username {
-    font-size: 17px;
-    margin-top: 4px;
-    color: black;
-  }
-  /* Set all navbar text to white */
-  .cc, .nav-item {
-    color: white; /* changed from black to white */
-    font-size: 1.5rem;
-    padding: 5px 20px;
-    text-decoration: none;
-  }
-  .nav-item:hover{
-    color: white;
-    background: linear-gradient(to right, orange, orangered, red);
-    padding: 5px 20px;
-    border-radius: 5px;
-  }
-  .nav-dropdown {
-    width: 172px;
-  }
+.user {
+  margin-top: 0rem; /* removed extra vertical spacing */
+  margin-right: 1.2rem;
+  padding: 0.3rem; /* slightly reduced for height */
+  background-color: white;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  width: 9rem;
+}
 
-  .flex {
-    /* background-color: black;  */
-    /* adds a nice look lowkey */
-  }
-  .create-events:hover{
-    background-color: black;
-    color: white;
-  }
+.username {
+  font-size: 13px;
+  margin-top: 0px; /* remove extra spacing above name */
+  color: black;
+}
+
+.cc {
+  color: white;
+  font-size: 1.3rem;
+  padding: 2px 12px;
+  text-decoration: none;
+}
+
+.nav-item {
+  color: white;
+  font-size: 1.15rem;
+  padding: 1px 12px; /* reduced vertical padding */
+  text-decoration: none;
+}
+
+.nav-title {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+}
+
+.nav-item:hover {
+  color: white;
+  background: linear-gradient(to right, orange, orangered, red);
+  padding: 1px 12px;
+  border-radius: 5px;
+}
+
+.nav-dropdown {
+  width: 172px;
+}
+
+.flex {
+  /* reserved for layout tweaks */
+}
+
+.create-events:hover {
+  background-color: black;
+  color: white;
+}
+
+.avatar {
+  width: 30px !important;
+  height: 30px !important;
+}

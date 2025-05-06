@@ -66,7 +66,9 @@ const Event = () => {
   };
 
 //   only get events where all filters match/are not filled in
-  const filteredEvents = events.filter(applyFilters);
+const filteredEvents = events
+  .filter(applyFilters)
+  .filter(event => event.location && event.location.trim() !== "");
   // filters will automatically update, then we are just making comparisons in applyFilters
   return (
     <div className="event">
