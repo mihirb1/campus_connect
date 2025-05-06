@@ -1,0 +1,130 @@
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 5% 10% 0 10%;
+  min-height: 100vh;
+  background-color: #1a1818;
+  flex-wrap: wrap;
+}
+
+.left-content {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.right-images {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.img-back {
+    width: 380px;
+    border-radius: 10px;
+    object-fit: cover;
+    position: absolute;
+    top: 70px;
+    left: 120px; /* shifted right for slight overlap */
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+.img-front {
+  width: 320px;
+  border-radius: 10px;
+  object-fit: cover;
+  position: absolute;
+  top: 170px;
+  left: 320px; /* shifted right for slight overlap */
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+.title {
+  background: linear-gradient(to right, yellow, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-size: 60px;
+  margin-bottom: 20px;
+  text-align: left;
+  width: 100%;
+}
+
+.subtitle {
+  color: white;
+  font-size: 42px;
+  margin-bottom: 20px;
+  text-align: left;
+  width: 100%;
+}
+
+.d {
+  color: white; /* changed to full white */
+  font-size: 20px; /* slightly larger */
+  line-height: 1.6;
+  margin-bottom: 30px; /* more space before buttons */
+  max-width: 90%;
+  text-align: left;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+.get-started {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  padding: 12px 24px;
+  border-radius: 30px;
+  background-color: rgb(34, 32, 32);
+  background-clip: padding-box;
+  z-index: 1;
+  color: white;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.get-started::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 30px;
+  padding: 2px;
+  background: linear-gradient(to right, orange, red);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.get-started:hover {
+  background-color: white;
+  color: #222;
+  border: 2px solid white;
+}
+
+.get-started:hover::before {
+  background: white;
+  -webkit-mask: none;
+  mask: none;
+}
