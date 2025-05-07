@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import './Home.css';
 import BlurredColor from './BlurredColor';
+import {motion} from "framer-motion";
 const Home = () => {
   const navigate = useNavigate();
 
@@ -8,8 +9,15 @@ const Home = () => {
   const exploreEvents = () => navigate('/create');
 
   return (
-    <div className="home-container">
-      {/* <BlurredColor /> */} 
+
+    <motion.div
+    className="home-container"
+    initial={{ opacity: 0, y: 30 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+  >
+        <div className="home-container">
+      <BlurredColor /> 
       {/* comment/comment out to include blurred color */}
       <div className="left-content">
         <h1 className="title">Campus Connect</h1>
@@ -28,6 +36,8 @@ const Home = () => {
         <img src="/sdsu.jpg" alt="SDSU" className="img-front" />
       </div>
     </div>
+  </motion.div>
+
   );
 };
 

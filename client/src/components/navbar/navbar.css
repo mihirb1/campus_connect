@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 50px;
 }
 
 .logo {
@@ -11,19 +12,23 @@
 }
 
 .user {
-  margin-top: 1rem; /* removed extra vertical spacing */
+  margin-top: 0.5rem;
   margin-right: 1.2rem;
-  padding: 0.3rem; /* slightly reduced for height */
+  padding: 0.3rem;
   background-color: white;
   border-radius: 5px;
   font-size: 0.85rem;
-  width: 9rem;
+  width: 9rem; /* 144px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .username {
   font-size: 13px;
-  margin-top: 0px; /* remove extra spacing above name */
   color: black;
+  margin-left: 6px;
 }
 
 .cc {
@@ -36,7 +41,13 @@
 .nav-item {
   color: white;
   font-size: 1.15rem;
-  padding: 1px 12px; /* reduced vertical padding */
+  padding: 1px 12px;
+  text-decoration: none;
+}
+.nav-item,
+.nav-item:hover,
+.nav-item:focus,
+.nav-item:visited {
   text-decoration: none;
 }
 
@@ -53,17 +64,43 @@
   border-radius: 5px;
 }
 
+/* Wraps trigger and dropdown for proper alignment */
+.dropdown {
+  position: relative;
+  /* margin-left: -6px; */
+}
+
+/* ✅ White dropdown with black text */
 .nav-dropdown {
-  width: 172px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 160px;
+  background-color: white;
+  border: 1px solid #999;
+  padding: 8px 0;
+  border-radius: 8px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
-.flex {
-  /* reserved for layout tweaks */
+/* ✅ Default black text on white background */
+.create-events {
+  color: black;
+  background-color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 6px 12px;
+  transition: all 0.2s ease;
 }
 
+/* ✅ Hover turns black background, white text */
 .create-events:hover {
   background-color: black;
   color: white;
+  border-radius: 4px;
 }
 
 .avatar {

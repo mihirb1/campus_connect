@@ -136,18 +136,37 @@ function Map() {
                 onClick={() => setSelectedEvent(event)}
               />
             ))}
-
             {selectedEvent && (
               <InfoWindow
                 position={{ lat: selectedEvent.lat, lng: selectedEvent.lng }}
                 onCloseClick={() => setSelectedEvent(null)}
               >
-                <div className="text-black w-60">
-                  <h3 className="text-lg font-bold">{selectedEvent.name}</h3>
-                  <p className="text-sm">{selectedEvent.location}</p>
+                <div className="text-black w-64">
+                  <h3 className="text-lg font-bold mb-1">{selectedEvent.name}</h3>
+                  <b><p className='text-sm mb-2'>{selectedEvent.organization}</p></b>
+                  
+                  <p className="text-sm mb-2">{selectedEvent.location}</p>
+                  <img
+                    src={getStreetViewImageURL(selectedEvent.location)}
+                    alt="event"
+                    className="w-full h-32 object-cover rounded mb-2"
+                    onError={(e) =>
+                      (e.currentTarget.src = "https://via.placeholder.com/150?text=No+Image")
+                    }
+                  />
+                  <button
+                    onClick={() => {
+                      const encoded = encodeURIComponent(selectedEvent.location);
+                      window.open(`https://www.google.com/maps/dir/?api=1&destination=${encoded}`, "_blank");
+                    }}
+                    className="mt-1 bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded w-full"
+                  >
+                    Directions
+                  </button>
                 </div>
               </InfoWindow>
             )}
+
           </GoogleMap>
         </LoadScript>
       </div>

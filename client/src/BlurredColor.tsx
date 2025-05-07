@@ -8,20 +8,22 @@ const BlurredColor = () => {
         width: "300px",
         height: "300px",
         borderRadius: "0%",
-        backgroundColor: "yellow",
+        backgroundColor: "orange",
         filter: "blur(200px)",
         opacity: 0.7,
+        pointerEvents: "none"
     } as React.CSSProperties;
     const blurredStyle2 = {
         position: "absolute",
-        top: "10px",
-        left: "900px",
+        top: "150px",
+        left: "1200px",
         width: "300px",
         height: "300px",
         borderRadius: "0%",
         backgroundColor: "orange",
         filter: "blur(200px)",
         opacity: 0.8,
+        pointerEvents: "none"
     } as React.CSSProperties;
 
     return (
