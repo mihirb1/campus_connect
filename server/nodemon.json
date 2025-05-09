@@ -1,6 +1,7 @@
 {
   "watch": ["src"],
   "ext": "ts",
-  "exec": "bun run src/index.ts"
+  "exec": "bunx ts-node --loader ts-node/esm src/index.ts"
+
 }
 

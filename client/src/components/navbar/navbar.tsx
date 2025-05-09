@@ -1,5 +1,4 @@
-import { User } from "lucide-react"
-
+import { CreditCard, User } from "lucide-react"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import {
   NavigationMenu,
@@ -10,9 +9,15 @@ import {
   NavigationMenuTrigger
 } from "@/components/ui/navigation-menu"
 import './navbar.css';
+import Login from "@/Login";
+import { useContext } from "react";
+import { UserContext } from "@/context";
+
 export default function Navbar() {
+  const { setUser } = useContext(UserContext);
 
   return (
+    
     <nav className="shadow-sm">
         <div className="navbar">
             <div className = "nav-title">
@@ -33,13 +38,7 @@ export default function Navbar() {
                 <NavigationMenuList>
                   <NavigationMenuItem>
                     <NavigationMenuTrigger className="user">
-                        <Avatar className="h-8 w-8 border border-gray-200">
-                          <AvatarImage src="/profilepic.png" alt="User" />
-                          <AvatarFallback>
-                            <User className="h-4 w-4" />
-                          </AvatarFallback>
-                        </Avatar>
-                        <span className = "username">&nbsp;John Doe</span>
+                    <Login />
 
                     </NavigationMenuTrigger>
                       <NavigationMenuContent className = "nav-dropdown">
@@ -53,11 +52,18 @@ export default function Navbar() {
                             <NavigationMenuLink className = "create-events">
                               Events I'm attending
                             </NavigationMenuLink>
+                            <NavigationMenuLink onClick = {() => {
+                              localStorage.removeItem("user")
+                              setUser(undefined)
+                            }}  className = "create-events">
+                              Log out
+                            </NavigationMenuLink>
                           </div>
                       </NavigationMenuContent>
                   </NavigationMenuItem>
                 </NavigationMenuList>
               </NavigationMenu>
+              {/* // if successfull login */}
             </div>
           </div>
         </div>

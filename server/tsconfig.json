@@ -4,7 +4,8 @@
     "rootDir": "src",
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "strict": true
+    "strict": true,
+    "module": "ESNext",
+    "target": "ES2020",
   }
 }
-
